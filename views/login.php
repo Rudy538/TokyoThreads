@@ -81,7 +81,7 @@ session_start();
 
             <input type="text" placeholder="email" name="email">
 
-            <input type="text" placeholder="password" name="pass">
+            <input type="password" placeholder="password" name="pass">
 
             <p class="Fpass"> Forgot password? </p>
 
