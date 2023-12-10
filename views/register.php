@@ -39,7 +39,7 @@ session_start();
                     <button class="dropdown-login-bt" onclick="dropdown('dropdown-login-content')">
                         <?php
                         if (isset($_SESSION["email"])) {
-                            echo '<img class="dropdown-login-img" src="../icons/user-logged.png" alt="user-logged" style="margin-top: 3px; width: 25px;">';
+                            echo '<img class="dropdown-login-img" src="../icons/user-logged.png" alt="user-logged" style="margin-top: 2px; width: 25px;">';
                         } else {
                             echo '<img class="dropdown-login-img"  src="../icons/user.png" alt="user-not-logged" style="margin-top: 1px; width: 25px;">';
                         }
