@@ -1,0 +1,47 @@
+.main>form {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin: -50px auto 0 auto;
+    width: 250px;
+}
+
+form>.input {
+    margin: 15px 0 0 0;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: darkgray;
+
+}
+
+form>button {
+    height: 25px;
+    margin: 15px 30px 0 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(248, 129, 149);
+}
+
+form>button:hover {
+    background-color: rgb(254, 155, 171);
+}
+
+form>.login-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    font-size: large;
+}
+
+.check {
+    color: white;
+    margin-top: 15px;
+}
+
+.check>.checkbox {
+    margin-left: 10px;
+}
