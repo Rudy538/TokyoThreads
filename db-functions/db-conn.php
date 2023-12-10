@@ -15,7 +15,3 @@ function PhpAlert($message)
     </script>
   END;
 }
-
-
-
-//hihihehe
