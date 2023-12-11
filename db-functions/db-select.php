@@ -12,15 +12,20 @@ $num_rows = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result);
 
 if($_SERVER["REQUEST_METHOD"] == 'POST') {
-  if ($num_rows > 0) {
-    $_SESSION["db_email"] = $row["email"];
-    $_SESSION["db_pass"] = $row["pass"];
-    PhpAlert('Logged in as: ' . $_SESSION["db_email"]);
-  } else {
-    session_unset();
-    session_destroy();
-    PhpAlert("Wrong email or password");
+  if(isset($_SESSION["email"]) && isset($_SESSION["pass"])){
+    PhpAlert("You are already logged in!");
     exit();
+  }else{
+    if ($num_rows > 0) {
+      $_SESSION["db_email"] = $row["email"];
+      $_SESSION["db_pass"] = $row["pass"];
+      PhpAlert('Logged in as: ' . $_SESSION["db_email"]);
+    }else {
+      session_unset();
+      session_destroy();
+      PhpAlert("Wrong email or password");
+      exit();
+    } 
   }
 }else{
   header("Location: ../views/index.php");
