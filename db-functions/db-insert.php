@@ -9,7 +9,6 @@ $stmt = "INSERT INTO users (email, pass) VALUES ('$email', '$pass')";
 $query = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
 $result = mysqli_query($conn, $query);
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) > 1) {
         PhpAlert('Email already taken');
