@@ -18,7 +18,7 @@ session_start();
 <body>
     <div class="dark-bg"></div>
     <div class="main">
-    <div class="header">
+        <div class="header">
             <script type="text/javascript" src="../Js/dropdown/dropdown.js"></script>
             <div class="dropdown-lang">
                 <button class="dropdown-lang-bt" onclick="dropdown('dropdown-lang-content')"><img class="dropdown-lang-img" src="../icons/earth.png"></button>
