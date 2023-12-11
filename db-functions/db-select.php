@@ -35,3 +35,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $_SESSION["email"] = $_SESSION["db_email"];
+$_SESSION["pass"] = $_SESSION["db_pass"];
