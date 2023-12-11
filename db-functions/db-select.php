@@ -16,6 +16,7 @@ if ($num_rows > 0) {
   $_SESSION["db_pass"] = $row["pass"];
 } else {
   session_unset();
+  session_destroy();
   PhpAlert("Wrong email or password");
   exit();
 }
