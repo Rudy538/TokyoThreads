@@ -19,7 +19,7 @@ session_start();
 <body>
     <div class="dark-bg"></div>
     <div class="main">
-        <div class="header">
+    <div class="header">
             <script type="text/javascript" src="../Js/dropdown/dropdown.js"></script>
             <div class="dropdown-lang">
                 <button class="dropdown-lang-bt" onclick="dropdown('dropdown-lang-content')"><img class="dropdown-lang-img" src="../icons/earth.png"></button>
@@ -39,7 +39,7 @@ session_start();
                 <div class="dropdown-login">
                     <button class="dropdown-login-bt" onclick="dropdown('dropdown-login-content')">
                         <?php
-                        if (isset($_SESSION["email"])) {
+                        if (isset($_SESSION["email"]) && isset($_SESSION["pass"])) {
                             echo '<img class="dropdown-login-img" src="../icons/user-logged.png" alt="user-logged" style="width: 25px;">';
                         } else {
                             echo '<img class="dropdown-login-img"  src="../icons/user.png" alt="user-not-logged" style="width: 25px;">';
@@ -50,7 +50,7 @@ session_start();
                         <a href="./login.php">Log In</a>
                         <a href="./register.php">Sign Up</a>
                         <?php
-                        if (isset($_SESSION["email"])) {
+                        if (isset($_SESSION["email"]) && isset($_SESSION["pass"])) {
                             echo '<a href="./account.php">Account</a>';
                         } else {
                             echo '';
@@ -58,7 +58,7 @@ session_start();
                         ?>
                     </div>
                 </div>
-                <button><img src="../icons/cart.png"></button>
+                <a href="./cart.php"><button class="cart"><img src="../icons/cart.png"></button></a>
             </div>
 
             <div class="nav">
